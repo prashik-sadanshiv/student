@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <title>Register</title>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="navbar">
+        <nav>
+          <ul>
+            <li><a href="{% url 'index.html' %}">Home</a></li>
+            <li><a href="{% url 'login.html' %}">Login</a></li>
+            <li><a href="#">About us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="info">
+      <form action="register" method='get'>
+        {% csrf_token %}
+        Enter First Name: <input type="text" id="fname" name="fname"><br><br>
+        Enter last Name: <input type="text" id="lname" name="lname"><br><br>
+        Enter Username: <input type="text" id="uname" name="uname"><br><br>
+        Enter age: <input type="text" id="age" name="age"><br><br>
+        Enter rollno: <input type="text" id="rollno" name="rollno"><br><br>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'styles/style.css' %}">
+  <title>Home Page</title>
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="navbar">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Register</a></li>
+            <li><a href="{% static 'login.html' %}">Login</a></li>
+            <li><a href="#">About us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="content">
+      <table>
+        <tr>
+          {% csrf_token %}
+          <th> <a href="register.html">Register</a></th>
+          <th> <a href="#">Update</a></th>
+          <th> <a href="#">ShowAll</a></th>
+          <th> <a href="#">ShowOne</a></th>
+          <th> <a href="#">Register</a></th>
+          <th> <a href="#">Removed</a></th>
+        </tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
